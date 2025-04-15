@@ -1,0 +1,52 @@
+CONCLUSIONES
+------------
+
+PRUEBAS FUNCIONALES
+-------------------
+
+1. El usuario standard_user tiene permisos correctos:
+    >Puede iniciar sesión y acceder a todas las funcionalidades necesarias para comprar.
+
+2. Los productos pueden agregarse al carrito correctamente:
+    >Los botones de “Add to Cart” funcionan y actualizan el carrito como se espera.
+
+3. El flujo completo de compra está operativo:
+    >El sitio permite completar todo el proceso de compra sin errores, desde el login hasta la confirmación final del pedido.
+    >El mensaje “THANK YOU FOR YOUR ORDER” confirma que el proceso fue exitoso.
+
+4. La navegación entre vistas es fluida:
+    >Desde la tienda al carrito, del carrito al checkout, y del checkout al resumen de compra, no hay bloqueos ni errores.
+
+PRUEBAS TÉCNICAS
+----------------
+
+1. Los selectores son confiables:
+    >Usar atributos data-test permite una automatización robusta, sin depender de clases o estructuras HTML volátiles.
+
+2. La automatización valida la estabilidad del sitio:
+    >El test pasó varias veces sin fallas, indicando que el flujo es consistente y estable.
+
+3. La validación de UI fue exitosa:
+    >Se comprobaron elementos visuales como el mensaje final de éxito y la correcta navegación por las pantallas del flujo.
+
+CONCLUSIONES FINALES:
+--------------------
+
+1. Este tipo de pruebas puede usarse como regresión automatizada:
+    >Muy útil para verificar que los cambios futuros en el sitio no rompan el flujo de compra.
+
+2. La cobertura de test puede escalarse fácilmente:
+    >A partir de este flujo básico, se pueden crear variantes:
+
+        * Con diferentes usuarios
+
+        * Con más/menos productos
+
+        * Probando validaciones del formulario de checkout
+
+3. La prueba es un buen punto de entrada para CI/CD:
+    >Ideal para integrarse en pipelines de integración continua y asegurar que siempre esté disponible el core del sistema.
+
+
+En relación a la prueba de API's, se considera que existen actualmente otras herramientas más flexibles y apropiadas.
+Particularmente, considero mejor Java con RestAssured.
